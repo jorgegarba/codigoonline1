@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Formularios</h1>
+  </header>
+  <main>
+    <section>
+      <!-- <form action="./pagina.html" method="GET"> -->
+      <form>
+        <!-- type=> tipo de informacion que queremos introducir -->
+        <!-- Placeholder: texto de ayuda en el input -->
+
+        <p>
+          <label for="nombre">Nombre:</label>
+          <input type="text" 
+                placeholder="Ejm: Jorge" 
+                id="nombre"
+                name="nombre"/>
+        </p>
+        <p>
+          <label for="apellido">Apellido:</label>
+          <input type="text" 
+                placeholder="Ejm: Garnica" 
+                id="apellido"
+                name="apellido"
+                value="Garnica"/>
+        </p>
+        <p>
+          <label for="fechaNac">Fecha de Nac:</label>
+          <input type="date"
+                  id="fechaNac"
+                  name="fechaNac">
+        </p>
+        <p>
+          <label for="sueldo">Sueldo:</label>
+          <input type="number" id="sueldo" name="sueldo" step="5">
+        </p>
+        <p>
+          <label for="pwd">Contraseña</label>
+          <input type="password" id="pwd" name="pwd">
+        </p>
+        <p>
+          <label for="correo">Email</label>
+          <input type="email" id="correo" name="correo">
+        </p>
+        <p>
+          <label for="miColor">Color Favorito</label>
+          <input type="color" id="miColor" name="miColor">
+        </p>
+        <p>
+          <label for="horaReg">Hora de Registro</label>
+          <input type="time" id="horaReg" name="horaReg">
+        </p>
+        <p>
+          <label>Elija Turno</label>
+        </p>
+        <p>
+          <label for="turnoDia">Mañana</label>
+          <input type="radio" name="turno" id="turnoDia" checked>
+          | 
+          <label for="turnoTarde">Tarde</label>
+          <input type="radio" name="turno" id="turnoTarde">
+          |
+          <label for="turnoNoche">Noche</label>
+          <input type="radio" name="turno" id="turnoNoche">
+        </p>
+        <p>
+          <label>Seleccione Materias</label>
+        </p>
+        <p>
+          <label for="uxui">UX/UI</label>
+          <input type="checkbox" id="uxui" name="uxui">
+          |
+          <label for="git">Git</label>
+          <input type="checkbox" id="git" name="git">
+          |
+          <label for="devops">DevOps</label>
+          <input type="checkbox" id="devops" name="devops">
+        </p>
+
+        <button type="submit">Registrarse</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+
+</html>
