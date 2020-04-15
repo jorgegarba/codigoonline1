@@ -31,6 +31,17 @@ article>h4 {
 }
 
 /* Selector de Clase */
-.lista-semanas{
+
+.lista-semanas {
     color: grey;
+}
+
+/* Selector que incluyen los atributos de un elemento */
+
+input[type="text"] {
+    border: 1px solid red;
+} 
+
+input[type="number"] {
+    border: 1px solid blue;
 }

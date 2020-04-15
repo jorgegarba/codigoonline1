@@ -1,0 +1,52 @@
+/* De cada grupo de hermanos al mismo nivel de li's.
+   Aplicar el color chocolate*/
+
+li:nth-child(3) {
+    color: chocolate;
+}
+
+/* Seleccionando al primer elemento de un grupo de hermanos
+   al mismo nivel*/
+
+p:first-child {
+    color: crimson;
+}
+
+p:last-child {
+    color: blue;
+}
+
+/* Seleccionar todos los elementos impares de un grupo de hermanos
+al mismo nivel */
+
+tr:nth-child(odd) {
+    background-color: tan;
+}
+
+/* pares */
+
+tr:nth-child(even) {
+    background-color: silver;
+}
+
+#tr-encabezado {
+    background-color: silver;
+}
+
+/* :not() => interpretado como un "excepto" */
+
+/* Todos los elementos hijos dentro de un ul a cualquier nivel 
+excepto los que tengan la clase "seleccionado" */
+/* Todos los hijos a cualquier nivel de un UL que
+a su vez sea hijo de un section, de todos ellos, excepto 
+el que tiene la clase "seleccionado"  */
+
+section ul :not(.seleccionado) {
+    color: red;
+}
+
+/* Todos los h4 excepto los que tengan la clase "letra-grande" */
+
+h4:not(.letra-grande) {
+    color: violet;
+}
