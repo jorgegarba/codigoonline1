@@ -2,5 +2,17 @@
 
 h1 {
     text-align: center;
-    color: #A5E8AE;
+    color: #a5e8ae;
+}
+
+main p {
+    color: rgb(200, 180, 100);
+}
+
+h3{
+    color: rgb(41, 176, 249);
+}
+
+.rojo-transparente{
+    color: rgba(255, 42, 85, 0.5);
 }

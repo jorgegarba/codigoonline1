@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 200px;
+    background-color: lightpink;
+    padding-top: 80px;
+}
+
+h1 {
+    text-align: center;
+}
+
+span {
+    background-color: limegreen;
+    /* padding: 10px (10 px a todos los lados) */
+    /* padding: 10px 30px (10 top y bottom, 30 left y right) */
+    /* padding: 10px 20px 30px 40px; (10 top, 20 right, 30 bottom, 40left*/
+    padding: 10px 20px 30px 40px;
+}

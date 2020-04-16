@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+}
+
+header {
+    height: 150px;
+    background-color: #FB6D6C;
+}
+
+main {
+    height: 1000px;
+}
+
+#section-1 {
+    width: 100px;
+    height: 100px;
+    background-color: mediumturquoise;
+    /* border-width: 1px;
+    border-style: solid;
+    border-color: navy; */
+    border: 3px solid navy;
+
+}
