@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div {
+    margin: 40px auto 0px auto;
+    height: 100px;
+    width: 100px;
+    background-color: #ddd;
+}
+
+#div-1 {
+    /* Transiciones */
+    /* all=> la transicion va a ser programada para cualquier
+  cambio en el elemento, ejemplo: color, borde, ancho,alto */
+    /* transition-property: all; */
+    /* Cuanto tiempo va a durar el cambio de estado */
+    /* transition-duration: 1s; */
+    /* Funcion de distribución de tiempo */
+    /* ease | ease-in | ease-in-out | linear */
+    /* transition-timing-function: ease; */
+    /* Tiempo de espera antes de iniciar el cambio de estado */
+    /* transition-delay: 0s; */
+    /* transition=> shorthand */
+    transition: all 1s ease 0s;
+}
+
+#div-1:hover {
+    transform: scale(2, 2);
+    border-radius: 20px;
+}
+
+#div-2 {
+    transition: all 1s ease 0s;
+    background-color: red;
+}
+
+#div-2:hover {
+    background-color: blue;
+    transform: rotate(90deg);
+}
+
+#div-3 {
+    background-image: url("http://placekitten.com/200/300");
+    /* cover => estira la imagen para que ocupe todo el contenedor */
+    /* contain => Si la imagen es pequenia, aparecen mas imagenes para cubrir
+  el contenedor */
+    background-size: cover;
+    transition: all 0.5s ease 0s;
+}
+
+#div-3:hover {
+    /* filter  */
+    /* blur => desenfoque, valores posibles de 1px a 10px */
+    /* LIBRO => Página 127 del libro o 142 del PDF */
+    filter: blur(3px);
+}

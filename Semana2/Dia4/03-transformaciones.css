@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div {
+    margin: 40px auto 0px auto;
+    height: 100px;
+    width: 100px;
+    background-color: #ddd;
+}
+
+#div-1:hover {
+    /* scale(x,y) */
+    transform: scale(1.1, 0.9);
+}
+
+#div-2:hover {
+    background-image: url("https://via.placeholder.com/100/242754/E93E43?text=CodiGo");
+    transform: rotate(135deg);
+}
+
+#div-3:hover {
+    transform: translate(30px, 10px);
+}
+
+#div-4:hover {
+    transform: scale(1.2, 1.2) rotate(45deg);
+}

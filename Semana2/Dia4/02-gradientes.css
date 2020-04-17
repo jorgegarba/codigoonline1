@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#div-1 {
+    width: 150px;
+    height: 150px;
+    margin: 50px auto 0px auto;
+    border: 1px solid #aaaaaa;
+    /* linear-gradient( posición angulo [colores] ) */
+    /* background: linear-gradient(90deg, #141e30, #587494); */
+    background: radial-gradient(#141e30, #587494);
+}
+
+body {
+    height: 800px;
+    background: radial-gradient(#ee8899, #ffffff);
+}
