@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#div-1 {
+    width: 150px;
+    height: 150px;
+    background-color: tomato;
+    /* animation: nombre duración funcion_de_tiempo delay nro_de_veces_a_repetir direction fill-mode; */
+    animation: cambiardecolores 2s ease 0s infinite normal none;
+}
+
+#div-2 {
+    margin: 100px auto 0px auto;
+    width: 64px;
+    height: 64px;
+    background-image: url('./refresh.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#div-2:hover {
+    animation: girar 1s linear 0s infinite normal none;
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.5)
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Creando una animación */
+
+@keyframes cambiardecolores {
+    0% {
+        background-color: tomato;
+    }
+    33% {
+        background-color: black;
+        transform: scale(2);
+    }
+    66% {
+        background-color: yellow;
+        transform: scale(1.5);
+    }
+    100% {
+        background-color: tomato;
+    }
+}

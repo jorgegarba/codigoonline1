@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: tomato;
+}
+
+aside, section {
+    display: inline-block;
+}
+
+aside {
+    height: 500px;
+    width: 30%;
+    background-color: teal;
+}
+
+section {
+    height: 500px;
+    width: 30%;
+    background-color: wheat;
+}

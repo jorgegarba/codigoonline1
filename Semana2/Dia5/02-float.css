@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: teal;
+    color: whitesmoke;
+}
+
+#caja-1 {
+    width: 140px;
+    height: 50px;
+    float: left;
+    /* margin: 5px; */
+    background-color: tomato;
+}
+
+#caja-2 {
+    width: 140px;
+    height: 50px;
+    float: left;
+    /* margin: 5px; */
+    background-color: tomato;
+}
+
+#caja-3 {
+    width: 140px;
+    height: 50px;
+    float: left;
+    /* margin: 5px; */
+    background-color: tomato;
+}
+
+#caja-4 {
+    width: 140px;
+    height: 50px;
+    float: left;
+    /* margin: 5px; */
+    background-color: tomato;
+}
+
+#contenedor {
+    background-color: tan;
+    width: 600px;
+}
+
+.fix {
+    clear: both;
+}
