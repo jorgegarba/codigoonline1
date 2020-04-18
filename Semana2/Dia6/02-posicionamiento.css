@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 2000px;
+}
+
+#section-1 {
+    border: 1px solid red;
+    height: 500px;
+    margin: 40px;
+}
+
+.div-2 {
+    background-color: brown;
+    width: 150px;
+    height: 150px;
+}
+
+.div-1 {
+    background-color: indigo;
+    width: 150px;
+    height: 150px;
+    opacity: 0.7;
+    /* relative => el elemento conserva su posicion
+    original, sin embargo, ya está habilitado para
+    moverse respecto de su PADRE
+    - Se pueden usar las referencias top y left
+    - Los hermanos del elemtno Relative respetan su posicion*/
+    position: relative;
+    top: 20px;
+    /* En Left o Top, cuaando toma un porcentaje, lo hace respecto del tamanio
+    DE SU PADRE*/
+    left: 50%;
+    /* En tranlate, cuando toma un porcentaje, lo hace
+    resepcto del ancho del mismo elemento, NO DEL PADRE*/
+    transform: translate(-75px, 0);
+}
+
+#section-2 {
+    border: 1px solid red;
+    margin: 40px;
+    height: 300px;
+    position: relative;
+}
+
+.div-3 {
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    /* opacity: 0.7; */
+    /* absolute => Se posiciona respecto del padre que tenga posicion relativa
+      - Si el padre no tiene posicion relativa, el elemento tomara como referencia
+        el proximo padre(abuelo o bisabuelo, etc) que tenga dicha posicion.
+      - Se pueden usar las referencias bottom, top, left y right
+      - Los hermanos del elemento absolute, ya no consideran su posicion como en el caso
+        del posicionamiento relative */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.div-4 {
+    width: 100px;
+    height: 100px;
+    background-color: darkblue;
+}
+
+.div-fixed {
+    width: 150px;
+    height: 150px;
+    background-color: darkred;
+    /* FIXED => su unica referencia, es la ventana del navegador
+     - Para ello, el elemento DEBE TENER ASIGNADO dos valores de refencia, 
+    ejm: top y left, ejm: bottom y left, ejm: bottom y right*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

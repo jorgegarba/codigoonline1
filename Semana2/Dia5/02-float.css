@@ -45,6 +45,32 @@ header {
     width: 600px;
 }
 
+#contenedor>div {
+    border: 1px solid red;
+}
+
 .fix {
     clear: both;
+}
+
+#navegacion {
+    background-color: crimson;
+    color: white;
+}
+
+.navegacion-wraper {
+    margin: 0 auto;
+    background-color: green;
+    width: 600px;
+}
+/* .navegacion-wraper>div:not(.fix) */
+
+.opcion-1, .opcion-2, .opcion-3 {
+    background-color: indigo;
+    width: 200px;
+    float: left;
+    /* margin: 5px -4px; */
+    text-align: center;
+    border: 1px solid yellow;
+    padding: 15px;
 }

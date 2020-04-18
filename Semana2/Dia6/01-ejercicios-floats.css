@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 70px;
+    background-color: indigo;
+}
+
+main {
+    height: calc(900px - 70px);
+    background-color: tomato;
+}
+
+aside {
+    float: left;
+    width: 20%;
+    background-color: coral;
+    height: calc(900px - 70px);
+}
+
+#principal {
+    float: left;
+    width: 60%;
+    background-color: cornflowerblue;
+    height: calc(900px - 70px);
+}
+
+.fix {
+    clear: both;
+}
