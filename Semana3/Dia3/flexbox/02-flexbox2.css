@@ -1,0 +1,33 @@
+* {
+ margin: 0;
+ box-sizing: border-box;
+ padding: 0;
+}
+
+.header {
+ display: flex;
+ justify-content: space-between;
+}
+
+.header__logo {
+ width: 200px;
+ display: flex;
+ justify-content: space-evenly;
+ border: 1px solid red;
+ align-items: center;
+}
+
+.header__navegacion {
+ border: 1px solid blue;
+ width: 400px;
+ display: flex;
+}
+
+.header__navegacion-lista {
+ display: flex;
+ width: 100%;
+ list-style: none;
+ justify-content: space-evenly;
+ align-items: center;
+ border: 1px solid red;
+}

@@ -1,0 +1,71 @@
+* {
+ margin: 0;
+ box-sizing: border-box;
+ padding: 0;
+}
+
+.padre {
+ /* flex-wrap: el contenedor, por defecto (nowrap)
+  conserva a todos los elementos en la misma fila sin importar
+  el ancho que los elementos necesiten */
+ flex-wrap: wrap;
+ height: 500px;
+ display: flex;
+ /*
+  flex-direction: valor pro defecto "row" 
+  Es decir, los elemento se alinean en 
+  una sola fila*/
+ /* flex-direction: row; */
+ /* width: 600px; */
+ border: 2px solid red;
+ /* justify-content: flex-start(por defecto) */
+ /* propiedad que centra en el eje principal
+  Cuando flex-direction = row el eje principal es X
+  Cuando flex-direction = column el eje principal es y  */
+ /*  */
+ justify-content: center;
+ /* align-items: Propiedad que centra en el eje secundario */
+ /* align-items: flex-start => propiedad por defecto cuando 
+  los hijos tiene una altura definida */
+ align-items: center;
+ /* Alinea el contenido SÓLO cuando se tiene activada 
+  la propiedad FLEX-WRAP con el valor WRAP, y cuando los
+  elementos colapsan  */
+ /* align-content: center; */
+}
+
+.padre>div {
+ height: 145px;
+ margin: 5px;
+ background-color: #ccc;
+}
+
+.caja-1 {
+ width: 100px;
+ /* flex: 1 1 100px; */
+}
+
+.caja-2 {
+ width: 100px;
+ /* flex: 1 1 100px; */
+}
+
+.caja-3 {
+ width: 100px;
+ /* flex: 1 1 100px; */
+}
+
+.caja-4 {
+ width: 100px;
+ /* flex: 1 1 100px; */
+}
+
+.caja-5 {
+ width: 100px;
+ /* flex: 1 1 100px; */
+}
+
+.caja-6 {
+ width: 100px;
+ /* flex: 1 1 100px; */
+}
