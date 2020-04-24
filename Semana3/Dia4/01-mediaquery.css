@@ -1,0 +1,48 @@
+* {
+ margin: 0;
+ box-sizing: border-box;
+ padding: 0;
+}
+
+body {
+ background-color: thistle;
+}
+
+/* @media ([condicion]) */
+
+/* ¿Cómo se lee? */
+
+/* Si como máximo la pantalla mide 480px de ancho
+se aplicarán todas las reglas del mediaquery establecido */
+
+/* all => para todos los casos de pantalla (para imprimir [print] para visualizar [screen] )*/
+
+/* screen => para todas las pantallas color */
+
+/* print => para la misma pantalla peeero, cuando se envia a una impresora (cuando se va a imprimir) */
+
+/* speech => para cuando la pantalla sea leída por un lector de pantalla*/
+
+@media screen and (max-width:1024px) {
+ body {
+  background-color: tomato;
+ }
+}
+
+@media screen and (max-width:768px) {
+ body {
+  background-color: teal;
+ }
+}
+
+@media screen and (max-width:480px) {
+ body {
+  background-color: white;
+ }
+}
+
+@media screen and (max-width:320px) {
+ body {
+  background-color: yellowgreen;
+ }
+}
