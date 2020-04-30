@@ -1,0 +1,1 @@
+"use strict";for(var i=0;i<10;)console.log("Vuelta ".concat(i," = Hola ke ase")),i+=1;console.log("Ultimo valor de i = ".concat(i)),console.log("/////////////////////////////////");for(var notas=[4,3,6,8,10,11,1],sumatoria=0,c=0;c<notas.length;)sumatoria+=notas[c],c+=1;console.log("Promedio = ".concat((sumatoria/notas.length).toFixed(2)));
