@@ -1,0 +1,1 @@
+"use strict";var acumulador=0,i=0,semaforo=!0;do{var x=+prompt("Ingrese la nota ".concat(i+1," ó -1 pa' salir"));-1!==x?(acumulador+=x,i++):semaforo=!1}while(!0===semaforo);console.log("Promedio ".concat(acumulador/i));

@@ -1,0 +1,1 @@
+"use strict";for(var numeros=[1,20.9,3,-1,-24,-45,0,-3,0],i=0,cPositivos=0,cCeros=0;i<numeros.length;)0<numeros[i]?cPositivos+=1:0===numeros[i]&&(cCeros+=1),i++;console.log("Positivos => ".concat(cPositivos)),console.log("Ceros => ".concat(cCeros)),console.log("Negativos => ".concat(numeros.length-(cPositivos+cCeros)));

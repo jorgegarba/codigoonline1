@@ -1,0 +1,1 @@
+"use strict";for(var i=0,acumulado=0,ingresar=!0;!0===ingresar;){var x=+prompt("Ingrese la nota ".concat(i+1));-1===x?ingresar=!1:acumulado+=x,i++}var promedio=acumulado/(i-1);console.log("Promedio de notas => ".concat(promedio));

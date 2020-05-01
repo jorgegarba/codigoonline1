@@ -1,0 +1,1 @@
+"use strict";for(var n=+prompt("¿Cuantos datos va a ingresar?"),arreglo=[],i=0;i<n;i++){var x=+prompt("Inserta el número");arreglo.push(2*x)}console.log(arreglo);

@@ -1,0 +1,1 @@
+"use strict";for(var n=+prompt("Cuántos usuarios va a ingresar?"),personas=[],i=0;i<n;i++){var usuario=[];usuario[0]=prompt("Ingrese su nombre"),usuario[1]=prompt("Ingrese su apellido"),usuario[2]=+prompt("Ingrese su edad"),personas.push(usuario)}for(var j=0;j<personas.length;j++)18<=personas[j][2]&&console.log(personas[j]);
