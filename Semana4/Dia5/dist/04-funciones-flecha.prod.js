@@ -1,0 +1,1 @@
+"use strict";var imprimirTriangulo=function(){for(var i="",o=0;o<5;o++){i="";for(var r=0;r<=o;r++)i+="*";console.log(i)}};imprimirTriangulo(),console.log("////////////////////////");var indiceMasaCorporal=function(i,o){return i/(o*o)},indice=indiceMasaCorporal(71.5,1.65);console.log(indice);

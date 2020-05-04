@@ -9,4 +9,3 @@ for (let i = 0; i < n; i++) {
  arreglo.push(x * 2);
 }
 console.log(arreglo);
-

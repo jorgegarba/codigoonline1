@@ -13,9 +13,9 @@ let n = +prompt("Cuántos usuarios va a ingresar?");
 let personas = [];
 for (let i = 0; i < n; i++) {
  let usuario = [];
- usuario[0] = prompt("Ingrese su nombre");
- usuario[1] = prompt("Ingrese su apellido");
- usuario[2] = +prompt("Ingrese su edad");
+ usuario[0] = prompt(`Ingrese el nombre del usuario ${i + 1}`);
+ usuario[1] = prompt(`Ingrese el apellido del usuario ${i + 1}`);
+ usuario[2] = +prompt(`Ingrese la edad del usuario ${i + 1}`);
  personas.push(usuario);
 }
 // A partir del algoritmo anterior

@@ -13,9 +13,9 @@ var personas = [];
 
 for (var i = 0; i < n; i++) {
   var usuario = [];
-  usuario[0] = prompt("Ingrese su nombre");
-  usuario[1] = prompt("Ingrese su apellido");
-  usuario[2] = +prompt("Ingrese su edad");
+  usuario[0] = prompt("Ingrese el nombre del usuario ".concat(i + 1));
+  usuario[1] = prompt("Ingrese el apellido del usuario ".concat(i + 1));
+  usuario[2] = +prompt("Ingrese la edad del usuario ".concat(i + 1));
   personas.push(usuario);
 } // A partir del algoritmo anterior
 // imprimir, sólo los usuarios con edad

@@ -57,3 +57,5 @@ let nota2 = +prompt("Ingrese 2ra Nota");
 let nota3 = +prompt("Ingrese 3ra Nota");
 let promedio = (nota1 * 0.25) + (nota2 * 0.25) + (nota3 * 0.5);
 console.log("Promedio " + promedio);
+
+
