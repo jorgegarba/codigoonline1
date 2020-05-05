@@ -4529,3 +4529,63 @@ let resultados = {
   }
  ]
 }
+
+// ejercicio
+// 1. Elaborar una función que obedezca a la siguiente estructura
+
+/**
+ * Funcion que  busca entre todos los paises el nombre de 
+ * un pais dado
+ * Cuando encuentra el nombre, deberá imprimir la cantidad
+ * de positivos y la cantidad de fallecidos
+ * En caso de que no se encuentre el nombre, la función
+ * imprimirá "ERROR EN EL NOMBRE"
+ * HINT: Cuando encuentren el nombre del país, 
+ * procuren usar la sentencia BREAK
+ * @param {*} nombre nombre del país a buscar
+ */
+const buscarPorNombre = (nombre) => {
+ let error = true;
+ console.log(`Resultados para ${nombre}`);
+ for (let i = 0; i < resultados.locations.length; i++) {
+  if (resultados.locations[i].country === nombre) {
+   console.log(`Infectados => ${resultados.locations[i].latest.confirmed}`);
+   console.log(`Fallecido => ${resultados.locations[i].latest.deaths}`);
+   error = false;
+   break;
+  }
+ }
+ // Ojo, tener en cuenta que el ciclo FOR, acabó ya sea
+ // porque encontró el país ó terminó de dar todas sus vueltas
+ if (error) {
+  console.log(`Error para la palabra buscada ${nombre}`);
+ }
+}
+
+buscarPorNombre("Winterfell");
+
+
+/**
+ * Funcion que retorna un arreglo de paises 
+ * cuya cantidad de infectados supere el 0.001%
+ * (comparando la cantida de infectados VS la poblacion de dicho pais)
+ * 
+ * @returns {paises} arreglo de STRINGS con los nombres de los paises
+ * que cumpla la condición establecida
+ */
+const mostrarEstadisticas = () => {
+ let filtrados = [];
+ for (let i = 0; i < resultados.locations.length; i++) {
+  let calculo = resultados.locations[i].latest.confirmed * 100 / resultados.locations[i].country_population;
+  if (calculo > 0.001) {
+   let objetoTemporal = {
+    pais: resultados.locations[i].country,
+    porcentaje: calculo.toFixed(3)
+   };
+   filtrados.push(objetoTemporal);
+  }
+ }
+ return filtrados;
+}
+let paises = mostrarEstadisticas();
+console.log(paises);
