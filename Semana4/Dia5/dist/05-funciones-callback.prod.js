@@ -1,0 +1,1 @@
+"use strict";var areaCirculo=function(r){var a;return 3.1416*((a=r)*a)},area=areaCirculo(25);console.log(area);
