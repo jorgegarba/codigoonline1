@@ -1,0 +1,1 @@
+"use strict";var pares=function(o,r){for(var n=[],e=0;e<o.length;e++)o[e]%2==0&&n.push(o[e]);r(n)},numeros=[4,3,2,4,5,6,10,96];pares(numeros,function(o){console.log(o)});var recorrer=function(o,r){for(var n=0;n<o.length;n++)r(o[n])};recorrer(numeros,function(o){console.log(o)}),numeros.forEach(function(o){console.log("Elemento: ".concat(o))});
