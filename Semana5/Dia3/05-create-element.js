@@ -4541,3 +4541,28 @@ let seccion1 = document.getElementById("seccion1");
 // Inyecta un elemento dado dentro del elemento del padre de 
 // referencia
 seccion1.appendChild(parrafo);
+
+
+
+// EJERCICIÓN
+let cuerpo = document.getElementById("cuerpo");
+
+resultados.locations.forEach((pais, i) => {
+
+ let fila = document.createElement("tr");
+ let tdNro = document.createElement("td");
+ tdNro.innerText = i;
+ let tdPais = document.createElement("td");
+ tdPais.innerText = pais.country;
+ let tdPositivos = document.createElement("td");
+ tdPositivos.innerText = pais.latest.confirmed;
+ let tdFallecidos = document.createElement("td");
+ tdFallecidos.innerText = pais.latest.deaths;
+ fila.appendChild(tdNro);
+ fila.appendChild(tdPais);
+ fila.appendChild(tdPositivos);
+ fila.appendChild(tdFallecidos);
+
+ cuerpo.appendChild(fila);
+
+})

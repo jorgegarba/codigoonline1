@@ -4272,4 +4272,22 @@ var seccion1 = document.getElementById("seccion1"); // elemento.appendChild(elem
 // Inyecta un elemento dado dentro del elemento del padre de 
 // referencia
 
-seccion1.appendChild(parrafo);
+seccion1.appendChild(parrafo); // EJERCICIÓN
+
+var cuerpo = document.getElementById("cuerpo");
+resultados.locations.forEach(function (pais, i) {
+  var fila = document.createElement("tr");
+  var tdNro = document.createElement("td");
+  tdNro.innerText = i;
+  var tdPais = document.createElement("td");
+  tdPais.innerText = pais.country;
+  var tdPositivos = document.createElement("td");
+  tdPositivos.innerText = pais.latest.confirmed;
+  var tdFallecidos = document.createElement("td");
+  tdFallecidos.innerText = pais.latest.deaths;
+  fila.appendChild(tdNro);
+  fila.appendChild(tdPais);
+  fila.appendChild(tdPositivos);
+  fila.appendChild(tdFallecidos);
+  cuerpo.appendChild(fila);
+});
