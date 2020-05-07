@@ -33,5 +33,11 @@ console.log("milisegundos => ".concat(milisegundos)); // ----- Crear una fecha c
 
 var navidad = new Date(2020, 11, 25); // El resultado de restar dos fechas se obtiene en milisegundos
 
-console.log(navidad - hoy); // a partir de la respuesta, calulcar la cantidad de semanas, dias y horas 
+var mili = navidad - hoy;
+var seg = mili / 1000;
+var min = seg / 60;
+var hor = min / 60;
+var dias = hor / 24;
+var sem = dias / 7;
+console.log(sem); // a partir de la respuesta, calulcar la cantidad de semanas, dias y horas 
 // que quedan para navidad.

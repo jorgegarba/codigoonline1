@@ -1,0 +1,1 @@
+"use strict";var miDiv=document.getElementById("miDiv");console.log(miDiv);for(var cuadrados=document.getElementsByClassName("cuadrado"),i=0;i<cuadrados.length;i++)console.log(cuadrados[i]);var miBoton=document.querySelector("#miBoton");console.log(miBoton);var cuadrados2=document.querySelectorAll(".cuadrado");console.log(cuadrados2);

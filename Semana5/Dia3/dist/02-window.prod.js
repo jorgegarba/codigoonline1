@@ -1,0 +1,1 @@
+"use strict";console.log(window.location),console.log(window.history),console.log(window.document),console.log("Ancho de la ventana ".concat(window.innerWidth)),console.log("Alto de la ventana ".concat(window.innerHeight)),console.log("Desplazado en Y ".concat(window.scrollY)),console.log(document);

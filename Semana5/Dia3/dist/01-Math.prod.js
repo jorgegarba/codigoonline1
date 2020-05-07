@@ -1,0 +1,1 @@
+"use strict";var raiz4=Math.sqrt(4);console.log(Math.floor(4.99)),console.log(Math.ceil(2.0001)),console.log(Math.round(8.3)),console.log(Math.round(8.6)),console.log(Math.random());var random2050=30*Math.random()+20;console.log(random2050.toFixed(0));
