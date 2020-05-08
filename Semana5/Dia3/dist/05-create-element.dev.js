@@ -4276,13 +4276,18 @@ seccion1.appendChild(parrafo); // EJERCICIÓN
 
 var cuerpo = document.getElementById("cuerpo");
 resultados.locations.forEach(function (pais, i) {
-  var fila = document.createElement("tr");
+  // creando la fila
+  var fila = document.createElement("tr"); // creando la columna de NRO
+
   var tdNro = document.createElement("td");
-  tdNro.innerText = i;
+  tdNro.innerText = i; // creando la columna de PAIS
+
   var tdPais = document.createElement("td");
-  tdPais.innerText = pais.country;
+  tdPais.innerText = pais.country; // creando la columna de CONFIRMADOS O POSITIVOS
+
   var tdPositivos = document.createElement("td");
-  tdPositivos.innerText = pais.latest.confirmed;
+  tdPositivos.innerText = pais.latest.confirmed; // creando la columna de FALLECIDOS
+
   var tdFallecidos = document.createElement("td");
   tdFallecidos.innerText = pais.latest.deaths;
   fila.appendChild(tdNro);

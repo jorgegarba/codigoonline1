@@ -4548,16 +4548,21 @@ seccion1.appendChild(parrafo);
 let cuerpo = document.getElementById("cuerpo");
 
 resultados.locations.forEach((pais, i) => {
-
+ // creando la fila
  let fila = document.createElement("tr");
+ // creando la columna de NRO
  let tdNro = document.createElement("td");
  tdNro.innerText = i;
+// creando la columna de PAIS
  let tdPais = document.createElement("td");
  tdPais.innerText = pais.country;
+// creando la columna de CONFIRMADOS O POSITIVOS
  let tdPositivos = document.createElement("td");
  tdPositivos.innerText = pais.latest.confirmed;
+// creando la columna de FALLECIDOS
  let tdFallecidos = document.createElement("td");
  tdFallecidos.innerText = pais.latest.deaths;
+
  fila.appendChild(tdNro);
  fila.appendChild(tdPais);
  fila.appendChild(tdPositivos);
