@@ -2,6 +2,9 @@ let boton1 = document.getElementById("boton1");
 let boton2 = document.getElementById("boton2");
 let boton3 = document.getElementById("boton3");
 let linkTema = document.getElementById("colorTema");
+let html = document.getElementById("html");
+let cuadradoNaranja = document.getElementById("cuadradoNaranja");
+
 
 
 // forma 1 de asociar un evento a un elemento.
@@ -31,14 +34,26 @@ boton2.onclick = handleClickBoton;
 // })
 
 
-
-
 // ejercicio cambio de tema
 boton3.onclick = () => {
  let archivo = linkTema.getAttribute("href");
  if (archivo === "./css/dark.css") {
   linkTema.setAttribute("href", "./css/light.css");
- }else{
+ } else {
   linkTema.setAttribute("href", "./css/dark.css");
  }
 }
+
+
+// INFORMACION DE UN EVENTO (EN EL CASO DEL CLICK)
+cuadradoNaranja.onclick = (e) => {
+ console.log(e);
+ console.log(`Click en X respecto del ViewPort ${e.clientX}px`);
+ console.log(`Click en Y respecto del ViewPort ${e.clientY}px`);
+
+ console.log(`Click en X respecto del elemento ${e.offestX}px`);
+ console.log(`Click en Y respecto del elemento ${e.offsetY}px`);
+
+ 
+}
+

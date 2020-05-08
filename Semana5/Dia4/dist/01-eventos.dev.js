@@ -3,7 +3,9 @@
 var boton1 = document.getElementById("boton1");
 var boton2 = document.getElementById("boton2");
 var boton3 = document.getElementById("boton3");
-var linkTema = document.getElementById("colorTema"); // forma 1 de asociar un evento a un elemento.
+var linkTema = document.getElementById("colorTema");
+var html = document.getElementById("html");
+var cuadradoNaranja = document.getElementById("cuadradoNaranja"); // forma 1 de asociar un evento a un elemento.
 
 var handleClickBoton = function handleClickBoton(event) {
   console.log(event);
@@ -36,4 +38,13 @@ boton3.onclick = function () {
   } else {
     linkTema.setAttribute("href", "./css/dark.css");
   }
+}; // INFORMACION DE UN EVENTO (EN EL CASO DEL CLICK)
+
+
+cuadradoNaranja.onclick = function (e) {
+  console.log(e);
+  console.log("Click en X respecto del ViewPort ".concat(e.clientX, "px"));
+  console.log("Click en Y respecto del ViewPort ".concat(e.clientY, "px"));
+  console.log("Click en X respecto del elemento ".concat(e.offestX, "px"));
+  console.log("Click en Y respecto del elemento ".concat(e.offsetY, "px"));
 };
