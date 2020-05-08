@@ -1,5 +1,9 @@
 let boton1 = document.getElementById("boton1");
 let boton2 = document.getElementById("boton2");
+let boton3 = document.getElementById("boton3");
+let linkTema = document.getElementById("colorTema");
+
+
 // forma 1 de asociar un evento a un elemento.
 
 let handleClickBoton = (event) => {
@@ -9,7 +13,7 @@ let handleClickBoton = (event) => {
  // sirve para obtenerel valor de un atributo de un elemento
  // del dom por ejemplo, <button id="boton1">CLICK</button>
  // elemento.getAttibute("id")// retorna "boton1"
- 
+
  if (event.target.getAttribute("id") === "boton1") {
   console.log("Click en el boton 1");
  } else {
@@ -25,3 +29,16 @@ boton2.onclick = handleClickBoton;
 // boton1.addEventListener("click", () => {
 //  console.log("Alguien hizo click en el boton1");
 // })
+
+
+
+
+// ejercicio cambio de tema
+boton3.onclick = () => {
+ let archivo = linkTema.getAttribute("href");
+ if (archivo === "./css/dark.css") {
+  linkTema.setAttribute("href", "./css/light.css");
+ }else{
+  linkTema.setAttribute("href", "./css/dark.css");
+ }
+}
