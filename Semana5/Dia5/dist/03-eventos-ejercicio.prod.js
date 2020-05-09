@@ -1,0 +1,1 @@
+"use strict";Waves.attach(".botonComprar"),Waves.attach(".contenedor"),Waves.init();
