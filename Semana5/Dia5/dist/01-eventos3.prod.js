@@ -1,0 +1,1 @@
+"use strict";window.onload=function(){document.getElementById("seccion1").innerText="Todo el DOM ha cargado"},window.onscroll=function(o){console.log(o)};
