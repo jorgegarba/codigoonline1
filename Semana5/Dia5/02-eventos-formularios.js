@@ -2,6 +2,10 @@ let nombreInput = document.getElementById("nombreInput");
 let selectDistrito = document.getElementById("selectDistrito");
 let enviarGatos = document.getElementById("enviarGatos");
 let formulario = document.getElementById("formulario");
+let menu = document.getElementById("menu");
+let opcion1 = document.getElementById("opcion1");
+let opcion2 = document.getElementById("opcion2");
+let opcion3 = document.getElementById("opcion3");
 // elemento.onchange
 // cuando sucede un cambio en el contenido de un elemeto y el focus
 // sale del elemento.
@@ -60,5 +64,39 @@ formulario.onsubmit = (e) => {
 // un click derecho sobre el elemento
 window.oncontextmenu = (e) => {
  e.preventDefault();
- 
+ // Por si acaso, oculto el menú
+ menu.setAttribute("hidden", "hidden");
+ let x = e.clientX;
+ let y = e.clientY;
+ // elemento.removeAttribue("nombre_del_atributo")
+ // elimina el atributo de un elemento
+ menu.style.left = `${x}px`;
+ menu.style.top = `${y}px`;
+ menu.removeAttribute("hidden");
 }
+
+window.onclick = () => {
+ menu.setAttribute("hidden", "hidden");
+}
+
+
+const clickOpcion = (e) => {
+ let id = e.target.getAttribute("id");
+ switch (id) {
+  case "opcion1":
+   console.log("click en la opcion1");
+   break;
+  case "opcion2":
+   window.print();
+   break;
+  case "opcion3":
+   console.log("click en la opcion3");
+   break;
+  default:
+   break;
+ }
+}
+
+opcion1.onclick = clickOpcion;
+opcion2.onclick = clickOpcion;
+opcion3.onclick = clickOpcion;
