@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ <style>
+  .fondo-tomate {
+   background-color: tomato;
+  }
+
+  .fondo-oscuro {
+   background-color: teal;
+  }
+
+  .fondo-claro {
+   background-color: #ddd;
+  }
+
+  .h-cien {
+   height: 100px;
+  }
+
+  .h-300 {
+   height: 300px;
+  }
+ </style>
+ <title>Document</title>
+
+</head>
+
+<body>
+
+ <main class="container-fluid">
+  <h4>Alineacion Vertical - alinear elemento en la parte superior en el eje Y</h4>
+  <code>class="align-items-start"</code>
+
+  <div class="row h-300 fondo-claro align-items-start">
+   <div class="col-md-4 h-cien fondo-oscuro">Columna 1</div>
+   <div class="col-md-4 h-cien fondo-tomate">Columna 2</div>
+   <div class="col-md-4 h-cien fondo-oscuro">Columna 3</div>
+  </div>
+
+  <h4>Alineacion Vertical - alinear elemento en la parte central en el eje Y</h4>
+  <code>class="align-items-center"</code>
+
+  <div class="row h-300 fondo-claro align-items-center">
+   <div class="col-md-4 h-cien fondo-oscuro">Columna 1</div>
+   <div class="col-md-4 h-cien fondo-tomate">Columna 2</div>
+   <div class="col-md-4 h-cien fondo-oscuro">Columna 3</div>
+  </div>
+
+  <h4>Alineacion Vertical - alinear elemento en la parte inferior en el eje Y</h4>
+  <code>class="align-items-end"</code>
+
+  <div class="row h-300 fondo-claro align-items-end">
+   <div class="col-md-4 h-cien fondo-oscuro">Columna 1</div>
+   <div class="col-md-4 h-cien fondo-tomate">Columna 2</div>
+   <div class="col-md-4 h-cien fondo-oscuro">Columna 3</div>
+  </div>
+
+  <h4>Alineacion Vertical Individual - alinear elemento en el eje Y</h4>
+  <code>class="align-self-[start,center,end]"</code>
+
+  <div class="row h-300 fondo-claro">
+   <div class="col-md-4 h-cien fondo-oscuro align-self-start">Columna 1</div>
+   <div class="col-md-4 h-cien fondo-tomate align-self-center">Columna 2</div>
+   <div class="col-md-4 h-cien fondo-oscuro align-self-end">Columna 3</div>
+  </div>
+ </main>
+
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
