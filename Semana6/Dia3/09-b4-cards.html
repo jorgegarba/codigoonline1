@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+ <title>Document</title>
+
+ <style>
+  body {
+   height: 100vh;
+  }
+ </style>
+</head>
+
+<body class="bg-light">
+
+ <main class="container">
+  <div class="row mt-4">
+   <div class="col">
+    <div class="card">
+     <div class="card-body">
+      Contenido del card
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="row mt-4">
+   <div class="col-md-3">
+    <div class="card">
+     <img src="http://placehold.it/200x200" alt="" class="card-img-top">
+     <div class="card-body">
+      <p class="card-text">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quia ratione laudantium ex vero. Vitae aliquam quo
+       numquam consequatur voluptate. Qui error reiciendis aperiam numquam recusandae eos, vel omnis exercitationem!
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="col-md-3">
+    <div class="card">
+     <div class="card-header">
+      Titulo
+     </div>
+     <div class="card-body">
+      <h5 class="card-title">Titulo del body</h5>
+      <p class="card-text">Texto del cuerpo del card</p>
+     </div>
+     <div class="card-footer text-muted">
+      Publicado hace 6 horas
+     </div>
+    </div>
+   </div>
+   <div class="col-md-6">
+    <div class="card">
+     <div class="row no-gutters">
+      <div class="col-md-4">
+       <img src="http://placehold.it/200x200" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+       <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+         This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="row mt-4">
+   <div class="col">
+    <div class="card shadow">
+     <div class="card-header">
+      <h3>Registro de Clientes</h3>
+     </div>
+     <div class="card-body">
+      <form class="row">
+       <div class="form-group col-md-6">
+        <label for="inputNombre">Nombre:</label>
+        <input type="text" placeholder="Ingrese..." id="inputNombre" class="form-control">
+        <small class="form-text text-success">Este es un texto de ayuda</small>
+       </div>
+       <div class="form-group col-md-6">
+        <label for="inputPassword">Password:</label>
+        <input type="password" placeholder="Ingrese..." id="inputPassword" class="form-control">
+        <small class="form-text text-info">No reveles tus credenciales</small>
+       </div>
+       <div class="form-group col-md-6">
+        <label for="selectIdioma">Seleccione Idioma</label>
+        <select name="" id="selectIdioma" class="form-control">
+         <option value="">Español</option>
+         <option value="">Inglés</option>
+        </select>
+       </div>
+       <div class="form-group col-md-6">
+        <label for="textMensaje">Escriba un mensaje</label>
+        <textarea name="" id="textMensaje" cols="30" rows="5" class="form-control"></textarea>
+       </div>
+       <div class="form-group col-md-6">
+        <label for="">Elegir géneros musicales</label>
+        <div class="form-check">
+         <input type="checkbox" id="checkRock" class="form-check-input">
+         <label class="form-check-label" for="checkRock">Rock</label>
+        </div>
+        <div class="form-check">
+         <input type="checkbox" id="checkJazz" class="form-check-input">
+         <label class="form-check-label" for="checkJazz">Jazz</label>
+        </div>
+       </div>
+
+       <div class="form-group col-md-6">
+        <label>Elija horario de clases:</label>
+
+        <div class="input-group">
+         <div class="input-group-prepend">
+          <div class="input-group-text">
+           <input id="radioLMV" name="radioDias" type="radio" aria-label="Radio button for following text input">
+          </div>
+         </div>
+         <label class="form-control" for="radioLMV">Lunes, Miercoles y Viernes</label>
+        </div>
+
+        <div class="input-group">
+         <div class="input-group-prepend">
+          <div class="input-group-text">
+           <input id="radioMJS" name="radioDias" type="radio" aria-label="Radio button for following text input">
+          </div>
+         </div>
+         <label class="form-control" for="radioMJS">Martes, Jueves y Sábados</label>
+        </div>
+       </div>
+
+       <div class="form-group col-md-6">
+        <label for="">Ejemplo datos invalidos</label>
+        <input type="text" class="form-control is-invalid">
+        <small class="form-text text-danger">Error de usuario</small>
+       </div>
+       <div class="form-group col-md-6">
+        <label for="">Ejemplo datos válidos</label>
+        <input type="text" class="form-control is-valid">
+        <small class="form-text text-success">El nombre está disponible</small>
+       </div>
+
+       <div class="form-group col-md-6">
+        <label for="inputEmail">Registrar Correo</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Ingrese correo nuevo">
+        <small class="form-text" id="helpEmail" hidden></small>
+       </div>
+
+       <div class="form-group col-md-12 text-center">
+        <button type="submit" class="btn btn-info">Guardar Datos</button>
+       </div>
+
+      </form>
+     </div>
+    </div>
+   </div>
+  </div>
+ </main>
+
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
