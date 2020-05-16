@@ -8,6 +8,12 @@
   integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
  <title>Document</title>
+ <style>
+  mark {
+   background: orange;
+   color: black;
+  }
+ </style>
 
 </head>
 
@@ -35,7 +41,7 @@
     </li>
    </ul>
    <form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <input class="form-control mr-sm-2" type="text" id="busqueda" placeholder="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
    </form>
   </div>
@@ -46,7 +52,7 @@
 
    </div>
    <div class="col-md-8">
-    <table class="table" id="tabla">
+    <table class="table table-responsive" id="tabla">
      <thead>
       <tr>
        <th>#</th>
@@ -74,6 +80,8 @@
   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
   integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"
+  integrity="sha256-IdYuEFP3WJ/mNlzM18Y20Xgav3h5pgXYzl8fW4GnuPo=" crossorigin="anonymous"></script>
  <script src="./03-jquery-elementos.js"></script>
 </body>
 

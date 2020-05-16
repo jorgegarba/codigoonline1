@@ -4264,26 +4264,71 @@ var resultados = {
     }
   }]
 };
-var paises = resultados.locations; // pais => un pais por cada vuelta en el arreglo
-// i => un iterador con valores de 0 a N
+var instance = new Mark(document.querySelector("#tabla tbody"));
+var paises = resultados.locations;
 
-paises.forEach(function (pais, i) {
-  // creando elementos con jQuery
-  // // // let fila = document.createElement("tr")
-  var fila = $("<tr></tr>");
-  var colNro = $("<td>".concat(i, "</td>"));
-  var colPais = $("<td>".concat(pais.country, "</td>"));
-  var colInfectados = $("<td>".concat(pais.latest.confirmed, "</td>"));
-  var colFallecidos = $("<td>".concat(pais.latest.deaths, "</td>"));
-  var colRecuperados = $("<td>".concat(pais.latest.recovered, "</td>"));
-  var colPoblacion = $("<td>".concat(pais.country_population, "</td>")); // insertando elementos hijos con jquery
-  // // // elemento.appendChild(elemento)
+var dibujar = function dibujar(arregloPaises) {
+  // modificar el html interno de un elemento con jQuery
+  $("#cuerpo").html("");
 
-  fila.append(colNro);
-  fila.append(colPais);
-  fila.append(colInfectados);
-  fila.append(colFallecidos);
-  fila.append(colRecuperados);
-  fila.append(colPoblacion);
-  $("#cuerpo").append(fila);
+  if (arregloPaises.length === 0) {
+    $("#cuerpo").html("<tr><td colspan=\"6\"> =( No tenemos resultados </td></tr>"); // cuando en una funcion se encuentra return; sin retorna nada, significa
+    // que la función, está dándose por terminada. No significa que está retornando algún
+    // valor
+
+    return;
+  } // pais => un pais por cada vuelta en el arreglo
+  // i => un iterador con valores de 0 a N
+
+
+  arregloPaises.forEach(function (pais, i) {
+    // creando elementos con jQuery
+    // // // let fila = document.createElement("tr")
+    var fila = $("<tr></tr>");
+    var colNro = $("<td>".concat(i, "</td>"));
+    var colPais = $("<td id=\"columnaPais".concat(pais.country, "\" nro=\"").concat(i, "\">").concat(pais.country, "</td>"));
+    colPais.click(function () {
+      alert(pais.country);
+    });
+    var colInfectados = $("<td>".concat(pais.latest.confirmed, "</td>"));
+    var colFallecidos = $("<td>".concat(pais.latest.deaths, "</td>"));
+    var colRecuperados = $("<td>".concat(pais.latest.recovered, "</td>"));
+    var colPoblacion = $("<td>".concat(pais.country_population, "</td>")); // insertando elementos hijos con jquery
+    // // // elemento.appendChild(elemento)
+
+    fila.append(colNro);
+    fila.append(colPais);
+    fila.append(colInfectados);
+    fila.append(colFallecidos);
+    fila.append(colRecuperados);
+    fila.append(colPoblacion);
+    $("#cuerpo").append(fila);
+  }); //+++++++ arregloPaises.forEach((pais, i) => {
+  //+++++++  // creando elementos con jQuery
+  //+++++++  // // // let fila = document.createElement("tr")
+  //+++++++  let fila = $(`<tr>
+  //+++++++                  <td>${i}</td>
+  //+++++++                  <td>${pais.country}</td>
+  //+++++++                  <td>${pais.latest.confirmed}</td>
+  //+++++++                  <td>${pais.latest.deaths}</td>
+  //+++++++                  <td>${pais.latest.recovered}</td>
+  //+++++++                  <td>${pais.country_population}</td>
+  //+++++++              </tr>`);
+  //+++++++  $("#cuerpo").append(fila);
+  //+++++++ })
+};
+
+dibujar(paises);
+$("#busqueda").keyup(function (e) {
+  // jquery, obteniendo en valor de un input
+  var textoBuscado = $("#busqueda").val();
+  console.log(e.key);
+  var resultados = paises.filter(function (pais) {
+    if (pais.country.toLowerCase().indexOf(textoBuscado.toLowerCase()) >= 0) {
+      return pais;
+    }
+  });
+  dibujar(resultados); // 
+
+  instance.mark(textoBuscado);
 });
