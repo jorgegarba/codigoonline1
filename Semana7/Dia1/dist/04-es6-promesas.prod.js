@@ -1,0 +1,1 @@
+"use strict";var consumo=function(){return new Promise(function(o,n){setTimeout(function(){n("Tiempo de espera agotado")},2e3)})};consumo().then(function(o){console.log("éxito"),console.log(o)}).catch(function(o){console.log("Ocurrio un error"),console.log(o)});

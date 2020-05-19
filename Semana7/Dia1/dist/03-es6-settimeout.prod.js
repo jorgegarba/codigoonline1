@@ -1,0 +1,1 @@
+"use strict";console.log("Hola");var sumar=function(){console.log("Sumando...")};console.log("Intermedio"),setTimeout(function(){console.log("Asicrono")},2e3),setTimeout(function(){console.log("Asincrono 2")},3e3),sumar(),console.log("Adiós");
