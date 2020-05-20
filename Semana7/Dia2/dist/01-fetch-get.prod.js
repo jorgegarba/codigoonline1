@@ -1,0 +1,1 @@
+"use strict";var endpoint="https://coronavirus-tracker-api.herokuapp.com/v2/locations";fetch(endpoint,{method:"GET",body:null}).then(function(o){o.json().then(function(o){console.log(o)}).catch(function(o){console.log(o)})}).catch(function(o){console.log(o)});
