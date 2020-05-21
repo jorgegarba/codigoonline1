@@ -9,9 +9,37 @@ const dibujarPeliculas = ({ results }) => {
     let cardBody = $(`<div class="card-body"></div>`);
     let cardTitle = $(`<h4 class="card-title">${peli.title}</h4>`);
 
-    let cardText = $(`<p class="card-text">${peli.overview.substr(0, 50)}</p>`);
-    let leerMas = $(`<span>... Leer Mas</span>`);
+    let cardText = $(`<p class="card-text"></p>`);
+    let spanTexto = $(`<span>${peli.overview.substr(0, 50)}</span>`);
+    let leerMas = $(`<span class="text-danger">... Leer Mas</span>`);
+
+    cardText.append(spanTexto);
     cardText.append(leerMas);
+
+    leerMas.click(() => {
+      // capturamis nuevamente al slider de flickity
+      let flick = $('#contenedor-peliculas').flickity({
+        // options
+        cellAlign: 'left',
+        contain: true,
+      });
+
+      let leerMasTexto = leerMas.text();
+      if (leerMasTexto.indexOf("Mas") > -1) {
+        // texto estaba chiquito
+        spanTexto.text(peli.overview);
+        leerMas.text(" Leer Menos");
+        // recalculamos la altura de flickity
+        flick.flickity('resize')
+      } else {
+        // texto estaba largo
+        spanTexto.text(peli.overview.substr(0, 50));
+        leerMas.text("... Leer Mas");
+        // recalculamos la altura de flickity
+        flick.flickity('resize')
+      }
+    })
+
 
     cardBody.append(cardTitle);
     cardBody.append(cardText);
@@ -23,22 +51,11 @@ const dibujarPeliculas = ({ results }) => {
     $("#contenedor-peliculas").append(carouselCell);
   });
 
-
-
-
-
-
-
-
-
-
-
-
-
+  // Toma al slider de Flickity y y lo convierte en UN SLIDER como tal
   $('#contenedor-peliculas').flickity({
     // options
     cellAlign: 'left',
-    contain: true
+    contain: true,
   });
 }
 
