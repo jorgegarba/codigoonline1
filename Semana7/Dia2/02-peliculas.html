@@ -11,9 +11,9 @@
  <title>Document</title>
 
  <style>
-  
   .carousel-cell {
-   width: 33.3%;
+   width: calc(33.3% - 10px);
+   margin-right: 10px;
    /* height: 200px; */
   }
 
@@ -24,7 +24,20 @@
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
-   
+  }
+
+  @media screen and (max-width:768px) {
+   .carousel-cell {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+   }
+  }
+
+  @media screen and (max-width:576px) {
+   .carousel-cell {
+    width: calc(100%);
+    margin-right: 0px;
+   }
   }
  </style>
 
@@ -71,11 +84,11 @@
    </div>
   </div>
   <div class="row justify-content-center mt-4">
-   <div class="col-8">
+   <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
     <div class="card shadow">
      <div class="card-body">
 
-      <div class="main-carousel" id="contenedor-peliculas">
+      <div class="main-carousel" id="contenedor-peliculas" hidden>
        <!-- <div class="carousel-cell">
              <div class="card">
               <div class="card-img-top imagen-pelicula">
@@ -91,7 +104,11 @@
               </div>
              </div>
             </div> -->
+      </div>
 
+      <div class="alert alert-info text-center" role="alert" id="alertCargando">
+       <h4 class="alert-heading">Cargando peliculas</h4>
+       <div class="spinner-border text-dark" role="status"></div>
       </div>
 
      </div>
