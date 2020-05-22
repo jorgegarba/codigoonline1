@@ -26,9 +26,9 @@
 
   <div class="row mt-5 justify-content-center">
    <div class="col-xl-8 col-lg-8">
-    <form class="busqueda">
+    <form class="busqueda" id="busquedaForm" autocomplete="off">
      <div class="busqueda__caja">
-      <input type="text" class="busqueda__input">
+      <input type="text" class="busqueda__input" id="busqueda__input">
       <i class="fas fa-search fa-2x busqueda__icono"></i>
      </div>
     </form>
@@ -37,22 +37,30 @@
 
   <div class="row justify-content-center">
    <div class="col-xl-6 col-lg-6">
-    <div class="clima">
+
+    <div class="alert alert-info text-center mt-5" id="cargando" role="alert" hidden>
+     <h4 class="alert-heading">Buscando climas...</h4>
+     <p>
+      <i class="fas fa-spinner fa-5x  fa-spin"></i>
+     </p>
+    </div>
+
+    <div class="clima" id="clima" hidden>
      <div class="clima__foto text-center">
-      <img src="http://openweathermap.org/img/wn/10d@4x.png" alt="">
+      <img src="http://openweathermap.org/img/wn/10d@4x.png" id="icon">
      </div>
      <div class="clima__datos bg-light">
       <div class="clima__pais">
        <div class="clima__grados">
-        <p class="display-2">25&#8451;</p>
+        <p class="display-2" id="temp">25&#8451;</p>
        </div>
        <div class="clima__ciudad">
-        <p>Nublado</p>
-        <p>Perú, Puerto Maldonado</p>
+        <p id="main">Nublado</p>
+        <p><span id="country">Perú</span>, <span id="name">Arequipa</span></p>
        </div>
       </div>
       <div class="clima__fecha">
-       <p>21/05 </p>
+       <p id="fecha">21/05 </p>
       </div>
      </div>
     </div>
@@ -67,6 +75,7 @@
   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
   integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ <script src="./01-weatherapp.js"></script>
 </body>
 
 </html>
