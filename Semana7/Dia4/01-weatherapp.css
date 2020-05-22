@@ -1,0 +1,90 @@
+* {
+ box-sizing: border-box;
+}
+
+p {
+ margin-bottom: 0 !important;
+}
+
+.busqueda__caja {
+ display: flex;
+ background-color: #ccc;
+ height: 100px;
+ border-radius: 5px;
+ overflow: hidden;
+}
+
+.busqueda__input {
+ width: 90%;
+ background-color: transparent;
+ border: none;
+ outline: none;
+ font-size: 3rem;
+ padding: 0 1.5rem;
+}
+
+.busqueda__icono {
+ width: 10%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: #292E33;
+ color: #ddd;
+}
+
+.clima {
+ background-color: #A64253;
+ height: 350px;
+ margin-top: 3rem;
+ border-radius: 15px;
+ overflow: hidden;
+}
+
+.clima__foto {
+ height: 60%;
+}
+
+.clima__datos {
+ height: 40%;
+ display: flex;
+}
+
+.clima__pais {
+ flex: 4;
+ display: flex;
+}
+
+.clima__grados {
+ width: 40%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: #ddd;
+}
+
+.clima__ciudad {
+ width: 60%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ padding: 0 1.2rem;
+ /* align-items: center; */
+}
+
+.clima__ciudad p:first-child {
+ font-size: 2.2rem;
+}
+
+.clima__ciudad p:last-child {
+ font-size: 1.5rem;
+}
+
+.clima__fecha {
+ flex: 1;
+ background-color: teal;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: #eee;
+ font-size: 3rem;
+}
