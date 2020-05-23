@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+  integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+ <link rel="stylesheet" href="./pedido-crear.css">
+
+ <title>Document</title>
+
+
+</head>
+
+<body class="bg-dark">
+
+ <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+   aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+   <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <li class="nav-item active">
+     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+     <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item dropdown">
+     <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false">Dropdown</a>
+     <div class="dropdown-menu" aria-labelledby="dropdownId">
+      <a class="dropdown-item" href="#">Action 1</a>
+      <a class="dropdown-item" href="#">Action 2</a>
+     </div>
+    </li>
+   </ul>
+   <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+   </form>
+  </div>
+ </nav>
+
+ <main class="container-fluid">
+
+  <div class="row mt-5">
+   <div class="col">
+    <h1 class="display-3 text-center text-light">Pedidos</h1>
+   </div>
+  </div>
+
+  <div class="row mt-5">
+   <div class="col-md-6">
+    <div class="card">
+     <div class="card-header">
+      <h4 class="card-title text-center">Formulario - Crear Pedido</h4>
+     </div>
+     <div class="card-body">
+      <form class="row" id="formPedido">
+       <div class="form-group col-md-6">
+        <label for="selectRepartidor">Seleccione Repartidor</label>
+        <select name="selectRepartidor" class="form-control" id="selectRepartidor">
+         <option value="0">--Seleccione--</option>
+        </select>
+       </div>
+       <div class="form-group col-md-6">
+        <label for="selectCliente">Seleccione Cliente</label>
+        <select name="selectCliente" class="form-control" id="selectCliente">
+         <option value="0">--Seleccione--</option>
+        </select>
+       </div>
+       <div class="form-group col-md-6">
+        <label for="selectProducto">Seleccione Producto</label>
+        <select name="selectProducto" class="form-control" id="selectProducto">
+         <option value="0">--Seleccione--</option>
+
+        </select>
+       </div>
+       <div class="form-group col-md-3">
+        <label for="inputOrigen">Coloque Origen</label>
+        <input type="text" class="form-control" id="inputOrigen">
+       </div>
+       <div class="form-group col-md-3">
+        <label for="inputDestino">Coloque Destino</label>
+        <input type="text" class="form-control" id="inputDestino">
+       </div>
+       <div class="form-group col-12">
+        <button class="btn btn-block btn-outline-dark">
+         <i class="fas fa-save mr-2"></i>Crear Pedido
+        </button>
+       </div>
+      </form>
+     </div>
+    </div>
+   </div>
+   <div class="col-md-6">
+
+   </div>
+  </div>
+
+ </main>
+
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+ <script src="./pedido-crear.js"></script>
+</body>
+
+</html>

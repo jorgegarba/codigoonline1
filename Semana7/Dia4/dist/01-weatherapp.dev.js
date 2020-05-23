@@ -43,6 +43,14 @@ var buscarCiudad = function buscarCiudad(ciudad) {
         cargando.setAttribute("hidden", "hidden"); // Disparar un sweetalert con un mensaje de error
         // que el sweetalert, se borre a los 2 segundos luego de aparecer
         // Sweetalert
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Ups!',
+          text: 'La ciudad buscada no existe =(',
+          timer: 2000,
+          timerProgressBar: true
+        });
       }
     });
   });
