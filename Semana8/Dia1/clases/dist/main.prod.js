@@ -1,0 +1,1 @@
+"use strict";var _Repartidor=require("./Repartidor.js"),_Cliente=require("./Cliente.js"),objRepartidor=new _Repartidor.Repartidor;objRepartidor.nombre="Jorge",objRepartidor.apellido="Garnica",console.log(objRepartidor);var objCliente=new _Cliente.Cliente("Pancho","Hernandez","34232312",1,"123-123");console.log(objCliente);
