@@ -55,8 +55,7 @@ const dibujarPeliculas = ({ results }) => {
   // ocultando alerta
   $("#alertCargando").attr("hidden", "hidden")
   // mostrando el carousel
-  $("#contenedor-peliculas").removeAttr("hidden");
-
+  $("#contenedor-peliculas").removeAttr("hidden")
   // Toma al slider de Flickity y y lo convierte en UN SLIDER como tal
   $('#contenedor-peliculas').flickity({
     // options

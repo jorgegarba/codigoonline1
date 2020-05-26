@@ -9,6 +9,12 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
   integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
  <link rel="stylesheet" href="./pedido-crear.css">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin="" />
+ <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
 
  <title>Document</title>
 
@@ -82,11 +88,14 @@
        </div>
        <div class="form-group col-md-3">
         <label for="inputOrigen">Coloque Origen</label>
-        <input type="text" class="form-control" id="inputOrigen">
+        <input type="text" class="form-control" id="inputOrigen" readonly>
        </div>
        <div class="form-group col-md-3">
         <label for="inputDestino">Coloque Destino</label>
-        <input type="text" class="form-control" id="inputDestino">
+        <input type="text" class="form-control" id="inputDestino" readonly>
+       </div>
+       <div class="form-group col-12 contenedorMapa" id="mapa">
+
        </div>
        <div class="form-group col-12">
         <button class="btn btn-block btn-outline-dark">
