@@ -8,6 +8,8 @@ import React from 'react';
 const Header = (props) => {
  // Todo componente debe retornar como máximo.
  // 1 etiqueta
+ console.log(props.links);
+
  return (
   <header>
    <h1>{props.titulo}</h1>

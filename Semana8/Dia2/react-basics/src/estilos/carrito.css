@@ -1,0 +1,10 @@
+.carrito {
+ position: fixed;
+ background-color: #eee;
+ top: 0;
+ right: 0;
+ width: 300px;
+ height: 100vh;
+ border: 1px solid red;
+ box-shadow: #000 0px 0px 10px;
+}
