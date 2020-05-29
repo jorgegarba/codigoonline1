@@ -47,7 +47,7 @@ function App() {
       <Header titulo={miTitulo} links={enlaces} />
       <main>
         <h2>Tienda</h2>
-        <h3>Carrito ({carrito.length})</h3>
+        <h3>Carrito: ({carrito.length} Producto(s))</h3>
         <h3>Contador ({contador})</h3>
         <hr />
         <Productos productos={productos}
@@ -56,7 +56,7 @@ function App() {
           carrito={carrito} />
       </main>
       <Footer />
-      <Carrito carrito={carrito} />
+      <Carrito carrito={carrito} actualizarCarrito={actualizarCarrito} />
     </Fragment>
   );
 }
