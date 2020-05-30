@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 const Formulario = ({ agregarContacto }) => {
 
@@ -42,7 +43,10 @@ const Formulario = ({ agregarContacto }) => {
       // por sí acaso, cambiamos el error a false, sin importar su valor anterior
       setError(false);
       // crear el contacto en la agenda
-      agregarContacto(contacto);
+      let copiaContacto = { ...contacto };
+      // generando un nuevo atributo a la copiaContacto
+      copiaContacto.id = uuidv4();
+      agregarContacto(copiaContacto);
       // reiniciar el formulario, es decir el state
       setContacto({
         nombres: '',
