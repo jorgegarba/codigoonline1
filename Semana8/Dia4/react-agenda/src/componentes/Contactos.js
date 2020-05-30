@@ -1,7 +1,7 @@
 import React from 'react'
 import Contacto from './Contacto'
 
-const Contactos = ({ contactos }) => {
+const Contactos = ({ contactos, setContactoSelec }) => {
 
  // let lis = [];
 
@@ -15,7 +15,7 @@ const Contactos = ({ contactos }) => {
    {/* {lis} */}
    {
     contactos.map(c => {
-     return <Contacto contacto={c} />
+     return <Contacto contacto={c} setContactoSelec={setContactoSelec} />
     })
    }
   </ul>
