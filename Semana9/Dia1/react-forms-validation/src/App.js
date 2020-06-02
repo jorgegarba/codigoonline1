@@ -1,10 +1,11 @@
 import React from 'react';
+import Refs from './components/Refs';
+import Formularios from './components/Formularios';
 
 function App() {
   return (
-    <div className="App">
-      Hola Mundo
-    </div>
+    // <Refs />
+    <Formularios />
   );
 }
 
