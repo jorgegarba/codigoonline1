@@ -8,7 +8,6 @@ const PokemonFila = ({ pokemon, nro }) => {
   let endpoint = pokemon.url;
   fetch(endpoint).then((response) => {
    response.json().then((data) => {
-    console.log(data.sprites.front_default);
     setImg(data.sprites.front_default);
    })
   })
