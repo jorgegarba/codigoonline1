@@ -10,6 +10,7 @@ import Contacto from './components/pages/contacto/Contacto';
 import Nosotros from './components/pages/nosotros/Nosotros';
 import Pokemones from './components/pages/pokemones/Pokemones';
 function App() {
+  let titulo = "Titulo Global de la App";
   return (
     <Router>
       <Header />
@@ -17,17 +18,19 @@ function App() {
       {/* SWITCHING DE PAGINAS */}
       <Switch>
         <Route path={'/home'}>
-          <Home />
+          <Home titulo={titulo} />
         </Route>
-        <Route path={'/nosotros'}>
-          <Nosotros />
-        </Route>
-        <Route path={'/contacto'}>
-          <Contacto />
-        </Route>
+
+        <Route path={'/nosotros'} render={() => {
+          return <Nosotros titulo={titulo} />
+        }} />
+
+        <Route path={'/contacto'} component={Contacto} />
+
         <Route path={'/pokemones'}>
           <Pokemones />
         </Route>
+
         <Route path={'/'}>
           <Home />
         </Route>

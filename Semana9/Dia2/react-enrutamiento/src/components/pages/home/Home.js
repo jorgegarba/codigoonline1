@@ -1,6 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-const Home = () => {
+const Home = (props) => {
+
+ console.log("Props de Home");
+ console.log(props);
  return (
   <div>
    <h2>Página Home</h2>
@@ -8,4 +12,4 @@ const Home = () => {
  )
 }
 
-export default Home
+export default withRouter(Home)
