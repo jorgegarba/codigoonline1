@@ -8,6 +8,11 @@ const Repartidores = () => {
   const [cargando, setCargando] = useState(true);
   const [repartidores, setRepartidores] = useState([]);
 
+  // objRepartidor es una variable de estado, la cual va a contener 
+  // un objeto de tipo repartidor sí y sólo si, queremos editar 
+  // a un repartidor, en caso contrario su valor será null
+  const [objRepartidor, setObjRepartidor] = useState(null);
+
   const getRepartidores = () => {
     if (!cargando) {
       setCargando(true);
@@ -29,7 +34,10 @@ const Repartidores = () => {
     <Fragment>
       <div className="row justify-content-center">
         <div className="col-md-8">
-          <RepartidorForm getRepartidores={getRepartidores} />
+          <RepartidorForm
+            getRepartidores={getRepartidores}
+            objRepartidor={objRepartidor}
+          />
         </div>
       </div>
 
@@ -38,7 +46,10 @@ const Repartidores = () => {
           {
             cargando === true ?
               <Cargando tipo="info" texto="Cargando repartidores" /> :
-              <RepartidoresTabla repartidores={repartidores} />
+              <RepartidoresTabla
+                repartidores={repartidores}
+                setObjRepartidor={setObjRepartidor}
+              />
           }
         </div>
       </div>
