@@ -37,6 +37,7 @@ const Repartidores = () => {
           <RepartidorForm
             getRepartidores={getRepartidores}
             objRepartidor={objRepartidor}
+            setObjRepartidor={setObjRepartidor}
           />
         </div>
       </div>

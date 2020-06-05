@@ -4,11 +4,16 @@ import Swal from 'sweetalert2';
 import { URL_BACKEND } from '../../../variables/variables';
 
 
+const formVacio = {
+  rep_nom: '',
+  rep_ape: '',
+  rep_est: '',
+  rep_dni: ''
+};
 // objRepartidor => es la variable de estado de Repartidores.js
 // la cual representa al objeto que necesita ser editado
 // en caso contrario, el valor recibido será {null}
-const RepartidorForm = ({ getRepartidores, objRepartidor }) => {
-
+const RepartidorForm = ({ getRepartidores, objRepartidor, setObjRepartidor }) => {
 
   let modoEditar = false;
 
@@ -23,11 +28,14 @@ const RepartidorForm = ({ getRepartidores, objRepartidor }) => {
   const errorObligatorio = <small className="text-danger">El campo es obligatorio *</small>;
   const errorDNI = <small className="text-danger">Coloque un DNI de 8 digitos</small>;
 
-  const postRepartidor = (objRepartidor) => {
+  const postRepartidor = (nuevoRepartidor) => {
     const endpoint = `${URL_BACKEND}/repartidor`;
+
+    console.log(JSON.stringify(nuevoRepartidor));
+
     fetch(endpoint, {
       method: 'POST',
-      body: JSON.stringify(objRepartidor),
+      body: JSON.stringify(nuevoRepartidor),
       headers: {
         "Content-type": "application/json"
       }
@@ -36,12 +44,7 @@ const RepartidorForm = ({ getRepartidores, objRepartidor }) => {
         // reset() => es parte de useForm() y es una función que sirve para
         // reiniciar un formualrio con un conjunto de datos por defecto para todos
         // los campos.
-        reset({
-          rep_nom: '',
-          rep_ape: '',
-          rep_est: '',
-          rep_dni: ''
-        })
+        reset(formVacio);
         // data, el resultado de la creacion del Repartidor
         Swal.fire({
           title: 'Éxito!',
@@ -64,7 +67,16 @@ const RepartidorForm = ({ getRepartidores, objRepartidor }) => {
       body: JSON.stringify(nuevoRepartidor)
     }).then((response) => {
       response.json().then((data) => {
-        console.log(data);
+        Swal.fire({
+          title: "Actualizado!",
+          text: "Registro actualizado correctamente",
+          icon: "success",
+          timer: 1500
+        });
+        // limpiar el form
+        reset(formVacio);
+        getRepartidores();
+        setObjRepartidor(null);
       })
     })
   }
