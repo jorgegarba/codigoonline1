@@ -4,42 +4,46 @@ import RepartidoresTabla from './componentes/RepartidoresTabla';
 import RepartidorForm from './componentes/RepartidorForm';
 const Repartidores = () => {
 
- const endpoint = "https://5ec86440155c130016a909c5.mockapi.io/repartidor";
- const [cargando, setCargando] = useState(true);
- const [repartidores, setRepartidores] = useState([]);
+  const endpoint = "https://5ec86440155c130016a909c5.mockapi.io/repartidor";
+  const [cargando, setCargando] = useState(true);
+  const [repartidores, setRepartidores] = useState([]);
 
- const getRepartidores = () => {
-  fetch(endpoint).then((response) => {
-   response.json().then((data) => {
-    setCargando(false);
-    setRepartidores(data);
-   })
-  })
- }
+  const getRepartidores = () => {
+    if (!cargando) {
+      setCargando(true);
+    }
 
- useEffect(() => {
-  getRepartidores();
- }, [])
+    fetch(endpoint).then((response) => {
+      response.json().then((data) => {
+        setCargando(false);
+        setRepartidores(data);
+      })
+    })
+  }
 
- return (
-  <Fragment>
-   <div className="row justify-content-center">
-    <div className="col-md-8">
-     <RepartidorForm />
-    </div>
-   </div>
+  useEffect(() => {
+    getRepartidores();
+  }, [])
 
-   <div className="row justify-content-center">
-    <div className="col-md-8">
-     {
-      cargando === true ?
-       <Cargando tipo="info" texto="Cargando repartidores" /> :
-       <RepartidoresTabla repartidores={repartidores} />
-     }
-    </div>
-   </div>
-  </Fragment>
- )
+  return (
+    <Fragment>
+      <div className="row justify-content-center">
+        <div className="col-md-8">
+          <RepartidorForm getRepartidores={getRepartidores} />
+        </div>
+      </div>
+
+      <div className="row justify-content-center">
+        <div className="col-md-8">
+          {
+            cargando === true ?
+              <Cargando tipo="info" texto="Cargando repartidores" /> :
+              <RepartidoresTabla repartidores={repartidores} />
+          }
+        </div>
+      </div>
+    </Fragment>
+  )
 }
 
 export default Repartidores
