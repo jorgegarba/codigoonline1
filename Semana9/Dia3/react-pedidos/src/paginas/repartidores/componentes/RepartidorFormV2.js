@@ -29,17 +29,11 @@ const RepartidorFormV2 = ({ getRepartidores, objRepartidor, setObjRepartidor }) 
 
 
   const handleChange = (e) => {
-    setFormulario({
-      ...formulario,
-      [e.target.name]: e.target.value
-    })
+    setFormulario({ ...formulario, [e.target.name]: e.target.value })
   }
 
   const postRepartidor = (nuevoRepartidor) => {
     const endpoint = `${URL_BACKEND}/repartidor`;
-
-    console.log(JSON.stringify(nuevoRepartidor));
-
     fetch(endpoint, {
       method: 'POST',
       body: JSON.stringify(nuevoRepartidor),
@@ -55,8 +49,6 @@ const RepartidorFormV2 = ({ getRepartidores, objRepartidor, setObjRepartidor }) 
           timer: 2000,
         });
         getRepartidores();
-
-
       })
     })
   }
@@ -83,38 +75,51 @@ const RepartidorFormV2 = ({ getRepartidores, objRepartidor, setObjRepartidor }) 
   }
   const enviarFormulario = (e) => {
     e.preventDefault()
-    if (objRepartidor) {
-      // tengo editar el registro
-      // LLAMADA A LA API CON EL VERBO PUT (fetch)
-      Swal.fire({
-        title: '¿Seguro que desea editar el registro?',
-        icon: 'info',
-        text: 'Los cambios harán efecto de inmediato en la base de datos',
-        showCancelButton: true
-      }).then((result) => {
-        if (result.value) {
-          console.log("OK PODEMOS EDITAR AL REPARTIDOR");
-          putRepartidor(formulario);
-        }
-      })
-    } else {
-      // tengo crear el registro
-      Swal.fire({
-        title: '¿Seguro que desea crear el registro?',
-        icon: 'info',
-        text: 'Los cambios harán efecto de inmediato en la base de datos',
-        showCancelButton: true
-      }).then((result) => {
-        if (result.value) {
-          console.log("OK PODEMOS CREAR AL USUARIO");
-          // stuff PARA CREAR AL USUARIO
-          // aqui hacemos un POST  a mockapi
-          postRepartidor(formulario);
-        }
-      })
-    }
-  }
 
+    if (formulario.rep_nom.trim() === "" ||
+      formulario.rep_ape.trim() === "" ||
+      formulario.rep_dni.trim() === "" ||
+      formulario.rep_est.trim() === "") {
+      Swal.fire({
+        icon: "error",
+        title: "Cuidado!",
+        text: "Todos los campos deben estar llenos"
+      });
+    } else {
+      if (objRepartidor) {
+        // tengo editar el registro
+        // LLAMADA A LA API CON EL VERBO PUT (fetch)
+        Swal.fire({
+          title: '¿Seguro que desea editar el registro?',
+          icon: 'info',
+          text: 'Los cambios harán efecto de inmediato en la base de datos',
+          showCancelButton: true
+        }).then((result) => {
+          if (result.value) {
+            console.log("OK PODEMOS EDITAR AL REPARTIDOR");
+            putRepartidor(formulario);
+          }
+        })
+      } else {
+        // tengo crear el registro
+        Swal.fire({
+          title: '¿Seguro que desea crear el registro?',
+          icon: 'info',
+          text: 'Los cambios harán efecto de inmediato en la base de datos',
+          showCancelButton: true
+        }).then((result) => {
+          if (result.value) {
+            console.log("OK PODEMOS CREAR AL USUARIO");
+            // stuff PARA CREAR AL USUARIO
+            // aqui hacemos un POST  a mockapi
+            postRepartidor(formulario);
+          }
+        })
+      }
+    }
+
+
+  }
 
   return (
     <div className="card">

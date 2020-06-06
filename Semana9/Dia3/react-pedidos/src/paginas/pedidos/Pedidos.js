@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import PedidoForm from './componentes/PedidoForm'
 
 const Pedidos = () => {
  return (
-  <div>
-   Pedidos
-  </div>
+  <Fragment>
+   <PedidoForm />
+
+  </Fragment>
  )
 }
 
