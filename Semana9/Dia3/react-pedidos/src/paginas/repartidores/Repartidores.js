@@ -4,6 +4,8 @@ import RepartidoresTabla from './componentes/RepartidoresTabla';
 import RepartidorForm from './componentes/RepartidorForm';
 import RepartidorFormV2 from './componentes/RepartidorFormV2';
 import RepartidorFormV3 from './componentes/RepartidorFormV3';
+import { withRouter } from 'react-router-dom';
+
 const Repartidores = () => {
 
   const endpoint = "https://5ec86440155c130016a909c5.mockapi.io/repartidor";
@@ -64,5 +66,6 @@ const Repartidores = () => {
     </Fragment>
   )
 }
-
-export default Repartidores
+// withRoute() => función que sirve para renderizar el componente
+// con los props del sistema de enrutamiento (history,match, etc.) 
+export default withRouter(Repartidores)

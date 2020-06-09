@@ -26,6 +26,10 @@ const Header = () => {
        {/* <a className="nav-link" href="!#">Link</a> */}
        <Link to={"/repartidores"} className="nav-link">Repartidores</Link>
       </li>
+      <li className="nav-item">
+       {/* <a className="nav-link" href="!#">Link</a> */}
+       <Link to={"/register"} className="nav-link">Crear Cuenta</Link>
+      </li>
      </ul>
     </div>
    </nav>
