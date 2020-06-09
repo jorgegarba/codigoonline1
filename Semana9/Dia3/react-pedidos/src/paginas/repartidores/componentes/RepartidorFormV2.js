@@ -1,8 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import Swal from 'sweetalert2';
 import { URL_BACKEND } from '../../../variables/variables';
+import RepartidorContext from '../../../context/repartidor/repartidorContext';
 
-const RepartidorFormV2 = ({ getRepartidores, objRepartidor, setObjRepartidor }) => {
+const RepartidorFormV2 = ({ getRepartidores }) => {
+  // Codigo para consumir el CONTEXT o el STATE GLOBAL DE REPARTIDOR
+  // 
+  const repartidorContextLocal = useContext(RepartidorContext);
+  const { objRepartidor, setObjRepartidor } = repartidorContextLocal;
+  // 
+  // FIN Codigo para consumir el CONTEXT o el STATE GLOBAL DE REPARTIDOR
 
   let formVacio = {
     rep_nom: '',
@@ -10,8 +17,6 @@ const RepartidorFormV2 = ({ getRepartidores, objRepartidor, setObjRepartidor }) 
     rep_est: '',
     rep_dni: ''
   };
-
-
 
   const [formulario, setFormulario] = useState({});
 
@@ -25,8 +30,6 @@ const RepartidorFormV2 = ({ getRepartidores, objRepartidor, setObjRepartidor }) 
   }, [objRepartidor])
 
   console.log("state form", formulario);
-
-
 
   const handleChange = (e) => {
     setFormulario({ ...formulario, [e.target.name]: e.target.value })

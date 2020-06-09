@@ -1,8 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import Switch from 'react-switch';
 import { URL_BACKEND } from '../../../variables/variables';
+import RepartidorContext from '../../../context/repartidor/repartidorContext';
 
-const RepartidorFila = ({ repartidor, numero, setObjRepartidor }) => {
+const RepartidorFila = ({ repartidor, numero }) => {
+
+  // Codigo para consumir el CONTEXT O EL STATE GLOBAL DE REPARTIDOR
+  //
+  const repartidorContextLocal = useContext(RepartidorContext);
+  const { setObjRepartidor } = repartidorContextLocal;
+  //
+  // FIN Codigo para consumir el CONTEXT O EL STATE GLOBAL DE REPARTIDOR
 
   const [checked, setChecked] = useState(false);
 
