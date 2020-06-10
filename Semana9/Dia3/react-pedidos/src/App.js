@@ -18,8 +18,6 @@ import Login from './paginas/auth/Login';
 import AuthState from './context/auth/authState';
 function App() {
 
-  const logeado = false;
-
   return (
     <AuthState>
       <RepartidorState>
@@ -29,14 +27,7 @@ function App() {
             <Switch>
               <Route exact path={"/clientes"} component={Clientes} />
               <Route exact path={"/pedidos"} component={Pedidos} />
-
-              <Route exact path={"/repartidores"} render={() => {
-                if (logeado) {
-                  return <Repartidores />
-                } else {
-                  return <Redirect to={{ pathname: '/' }} />
-                }
-              }} />
+              <Route exact path={"/repartidores"} component={Repartidores} />
               <Route exact path={"/register"} component={Register} />
               <Route exact path={"/login"} component={Login} />
 
