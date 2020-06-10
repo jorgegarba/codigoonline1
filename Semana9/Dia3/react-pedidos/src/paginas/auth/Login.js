@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react'
-import { AuthService } from '../../servicios/AuthService';
 import Swal from 'sweetalert2';
 import AuthContext from '../../context/auth/authContext';
 
@@ -13,7 +12,6 @@ const Login = () => {
   usu_email: "",
  });
 
- const objAuth = new AuthService();
  const { usu_pass, usu_email } = formulario;
 
  const onSubmit = (e) => {

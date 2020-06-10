@@ -5,38 +5,50 @@ import { AuthService } from '../../servicios/AuthService';
 
 const AuthState = (props) => {
 
- // creando un objeto del servicio AUTH
- const objAuthService = new AuthService();
+  // creando un objeto del servicio AUTH
+  const objAuthService = new AuthService();
 
- const initialState = {
-  autenticado: null,
-  token: "",
-  usuario: null
- }
+  const initialState = {
+    autenticado: null,
+    token: "",
+    usuario: null
+  }
 
- // Creamos el state global
- const [state, dispatch] = useReducer(AuthReducer, initialState);
+  // Creamos el state global
+  const [state, dispatch] = useReducer(AuthReducer, initialState);
 
- // FUNCIONES DE AUTH STATE
- const iniciarSesion = (email, password) => {
+  // FUNCIONES DE AUTH STATE
+  const iniciarSesion = (email, password) => {
 
-  objAuthService.postLoggin(email, password)
-   .then(data => {
-    // DEBERIA USAR EL DISPATCH
-    console.log(data);
-   })
+    objAuthService.postLoggin(email, password)
+      .then(data => {
+        // DEBERIA USAR EL DISPATCH
+        console.log(data);
+        if (data.message === "ok") {
+          dispatch({
+            type: "INICIO_EXITOSO",
+            payload: data.token
+          })
+        } else {
+          // GENERAR UN ERROR
+        }
 
- }
+
+      })
+
+  }
 
 
- return (
-  <AuthContext.Provider value={{
-   iniciarSesion: iniciarSesion
-  }}>
+  return (
+    <AuthContext.Provider value={{
+      autenticado: state.autenticado,
+      usuario: state.usuario,
+      iniciarSesion: iniciarSesion
+    }}>
 
-   {props.children}
-  </AuthContext.Provider>
- )
+      {props.children}
+    </AuthContext.Provider>
+  )
 }
 
 export default AuthState
