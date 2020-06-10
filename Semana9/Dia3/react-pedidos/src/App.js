@@ -14,35 +14,39 @@ import Home from './paginas/home/Home';
 import Header from './componentes/Header';
 import RepartidorState from './context/repartidor/repartidorState';
 import Register from './paginas/auth/Register';
-
+import Login from './paginas/auth/Login';
+import AuthState from './context/auth/authState';
 function App() {
 
   const logeado = false;
 
   return (
-    <RepartidorState>
-      <Router>
-        <Header />
-        <main className="container-fluid pt-3">
-          <Switch>
-            <Route exact path={"/clientes"} component={Clientes} />
-            <Route exact path={"/pedidos"} component={Pedidos} />
+    <AuthState>
+      <RepartidorState>
+        <Router>
+          <Header />
+          <main className="container-fluid pt-3">
+            <Switch>
+              <Route exact path={"/clientes"} component={Clientes} />
+              <Route exact path={"/pedidos"} component={Pedidos} />
 
-            <Route exact path={"/repartidores"} render={() => {
-              if (logeado) {
-                return <Repartidores />
-              } else {
-                return <Redirect to={{ pathname: '/' }} />
-              }
-            }} />
-            <Route exact path={"/register"} component={Register} />
+              <Route exact path={"/repartidores"} render={() => {
+                if (logeado) {
+                  return <Repartidores />
+                } else {
+                  return <Redirect to={{ pathname: '/' }} />
+                }
+              }} />
+              <Route exact path={"/register"} component={Register} />
+              <Route exact path={"/login"} component={Login} />
 
-            <Route exact path={"/productos"} component={Productos} />
-            <Route exact path={"/"} component={Home} />
-          </Switch>
-        </main>
-      </Router>
-    </RepartidorState>
+              <Route exact path={"/productos"} component={Productos} />
+              <Route exact path={"/"} component={Home} />
+            </Switch>
+          </main>
+        </Router>
+      </RepartidorState>
+    </AuthState>
   );
 }
 

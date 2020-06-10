@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
  return (
   <header>
-   <nav className="navbar navbar-expand-sm navbar-light bg-light">
+   <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
     <a className="navbar-brand" href="!#">Pedidos</a>
     <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
      aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -25,6 +25,10 @@ const Header = () => {
       <li className="nav-item">
        {/* <a className="nav-link" href="!#">Link</a> */}
        <Link to={"/repartidores"} className="nav-link">Repartidores</Link>
+      </li>
+      <li className="nav-item">
+       {/* <a className="nav-link" href="!#">Link</a> */}
+       <Link to={"/login"} className="nav-link">Iniciar Sesión</Link>
       </li>
       <li className="nav-item">
        {/* <a className="nav-link" href="!#">Link</a> */}
