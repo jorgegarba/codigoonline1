@@ -5,7 +5,7 @@ import AuthContext from '../../context/auth/authContext';
 const Login = (props) => {
 
   const authContextLocal = useContext(AuthContext);
-  const { iniciarSesion, autenticado } = authContextLocal;
+  const { iniciarSesion, autenticado, mensaje } = authContextLocal;
 
   const [formulario, setFormulario] = useState({
     usu_pass: "",
@@ -53,6 +53,12 @@ const Login = (props) => {
           </div>
           <div className="card-body">
             <form className="row" onSubmit={onSubmit}>
+              {
+                mensaje ?
+                  <div class="alert col-12 alert-danger" role="alert">
+                    <strong>Ups! </strong> el servidor dice: {mensaje}
+                  </div> : null
+              }
               <div className="form-group col-12">
                 <label htmlFor="">Ingrese Correo</label>
                 <input type="email" className="form-control"

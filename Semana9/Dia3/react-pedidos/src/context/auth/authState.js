@@ -11,7 +11,8 @@ const AuthState = (props) => {
   const initialState = {
     autenticado: null,
     token: "",
-    usuario: null
+    usuario: null,
+    mensaje: null,
   }
 
   // Creamos el state global
@@ -31,6 +32,10 @@ const AuthState = (props) => {
           })
         } else {
           // GENERAR UN ERROR
+          dispatch({
+            type: "ERROR_SESION",
+            payload: data.contenido
+          })
         }
       })
   }
@@ -54,6 +59,10 @@ const AuthState = (props) => {
           type: "AUTENTICAR_LS_EXITOSO",
           payload: token
         })
+      } else {
+        dispatch({
+          type: "BORRAR_SESION",
+        })
       }
     }
 
@@ -64,6 +73,7 @@ const AuthState = (props) => {
     <AuthContext.Provider value={{
       autenticado: state.autenticado,
       usuario: state.usuario,
+      mensaje: state.mensaje,
       cerrarSesion: cerrarSesion,
       iniciarSesion: iniciarSesion,
       autenticarConStorage: autenticarConStorage

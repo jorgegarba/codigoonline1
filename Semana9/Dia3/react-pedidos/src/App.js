@@ -16,6 +16,7 @@ import RepartidorState from './context/repartidor/repartidorState';
 import Register from './paginas/auth/Register';
 import Login from './paginas/auth/Login';
 import AuthState from './context/auth/authState';
+import RutaProtegida from './componentes/RutaProtegida';
 function App() {
 
   return (
@@ -25,13 +26,22 @@ function App() {
           <Header />
           <main className="container-fluid pt-3">
             <Switch>
-              <Route exact path={"/clientes"} component={Clientes} />
-              <Route exact path={"/pedidos"} component={Pedidos} />
-              <Route exact path={"/repartidores"} component={Repartidores} />
+              <RutaProtegida exact={true}
+                path={"/clientes"}
+                Componente={Clientes} />
+              <RutaProtegida exact={true}
+                path={"/pedidos"}
+                Componente={Pedidos} />
+              <RutaProtegida exact={true}
+                path={"/repartidores"}
+                Componente={Repartidores} />
+              <RutaProtegida exact={true}
+                path={"/productos"}
+                Componente={Productos} />
+
+              {/* <Route exact path={"/repartidores"} component={Repartidores} /> */}
               <Route exact path={"/register"} component={Register} />
               <Route exact path={"/login"} component={Login} />
-
-              <Route exact path={"/productos"} component={Productos} />
               <Route exact path={"/"} component={Home} />
             </Switch>
           </main>

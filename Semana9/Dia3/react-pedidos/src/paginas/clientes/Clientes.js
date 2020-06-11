@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
+import AuthContext from '../../context/auth/authContext';
 
 const Clientes = () => {
+
+ const authContextLocal = useContext(AuthContext);
+ const { autenticarConStorage } = authContextLocal;
+
+ useEffect(() => {
+  autenticarConStorage();
+ }, [])
+
+
  return (
   <div>
    Clientes
