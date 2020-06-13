@@ -5,11 +5,16 @@ import { Injectable } from '@angular/core';
 })
 export class ProductoService {
   endpoint = 'https://5ec86440155c130016a909c5.mockapi.io';
+  productoSeleccionado = null;
 
   // productos = [];
 
   constructor() {
     // this.getAllProductos();
+  }
+
+  setProductoSeleccionado(objeto) {
+    this.productoSeleccionado = objeto;
   }
 
   async getAllProductos() {
