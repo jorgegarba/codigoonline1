@@ -10,7 +10,6 @@ const RepartidorReducer = (state, action) => {
   // En Cristiano, tiene una lista de funciones para settear el State
   // al nuevo State
   
-
   switch (action.type) {
     case "CAMBIAR_OBJREPARTIDOR":
       // el valor que retorne, será el nuevo STATE

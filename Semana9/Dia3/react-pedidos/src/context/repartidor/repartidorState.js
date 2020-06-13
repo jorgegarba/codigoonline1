@@ -6,7 +6,8 @@ const RepartidorState = (props) => {
 
  // Creamos un objeto inical como state inicial de REPARTIDOR
  const estadoInicial = {
-  objRepartidor: null
+  objRepartidor: null,
+  contador: 1
  }
 
  // Crear un state y el (setState) que ahora lo llamaremos dispatch
@@ -26,10 +27,12 @@ const RepartidorState = (props) => {
 
 
  return (
-  <RepartidorContext.Provider value={{
-   objRepartidor: state.objRepartidor,
-   setObjRepartidor: setObjRepartidor
-  }}>
+  <RepartidorContext.Provider
+   value={{
+    objRepartidor: state.objRepartidor,
+    contador: state.contador,
+    setObjRepartidor: setObjRepartidor
+   }}>
    {props.children}
 
   </RepartidorContext.Provider>

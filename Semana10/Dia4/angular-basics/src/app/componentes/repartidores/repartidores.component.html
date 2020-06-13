@@ -1,0 +1,19 @@
+<div class="row">
+ <div class="col">
+  <table class="table">
+   <thead>
+    <tr>
+     <th>Id</th>
+     <th>Nombre</th>
+     <th>Apellido</th>
+     <th>DNI</th>
+     <th>Estado</th>
+    </tr>
+   </thead>
+   <tbody>
+    <app-repartidor *ngFor="let repartidor of repartidores"
+                     [objRepartidor]="repartidor"></app-repartidor>
+   </tbody>
+  </table>
+ </div>
+</div>

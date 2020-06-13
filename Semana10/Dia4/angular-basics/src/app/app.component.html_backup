@@ -1,0 +1,26 @@
+<header class="header">
+  <nav>
+    <ul>
+      <!-- Vamos a renderizar varios LI's con la directiva "ngFor" -->
+      <li *ngFor="let e of enlaces">
+        <a href="">{{e}}</a>
+      </li>
+    </ul>
+  </nav>
+  <span *ngIf="autenticado">
+    {{nombre}}
+  </span>
+  <span *ngIf="!autenticado">
+    Sin Sesión
+  </span>
+
+</header>
+<main class="main">
+  <h2> Contenido Principal</h2>
+  <button (click)="cambiarSesion()">
+    Cambiar Sesión
+  </button>
+</main>
+<footer class="footer">
+  <p>CodiGo &copy; Todos los Derechos reservados</p>
+</footer>

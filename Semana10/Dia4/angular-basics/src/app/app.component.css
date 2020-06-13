@@ -1,0 +1,26 @@
+.header {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: tomato;
+ color: white;
+ height: 10vh;
+}
+
+.main {
+ height: 80vh;
+ background-color: teal;
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.footer {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: tomato;
+ color: white;
+ height: 10vh;
+}
