@@ -11,8 +11,15 @@
     </tr>
    </thead>
    <tbody>
-    <app-repartidor *ngFor="let repartidor of repartidores"
-                     [objRepartidor]="repartidor"></app-repartidor>
+    <!-- <app-repartidor tr *ngFor="let repartidor of repartidores"
+                     [objRepartidor]="repartidor"></app-repartidor> -->
+    <tr *ngFor="let repartidor of repartidores">
+     <td>{{repartidor.id}}</td>
+     <td>{{repartidor.rep_nom}}</td>
+     <td>{{repartidor.rep_ape}}</td>
+     <td>{{repartidor.rep_dni}}</td>
+     <td>{{repartidor.rep_est}}</td>
+    </tr>
    </tbody>
   </table>
  </div>
